@@ -1,0 +1,14 @@
+<launch>
+
+  <arg name="x_speed"      default="1"/>
+  <arg name="y_speed"      default="1"/>
+
+
+  <param name="x_speed"    value="$(arg x_speed)"/>
+  <param name="y_speed"    value="$(arg y_speed)"/>
+
+
+  <node name="turtle_server"  pkg="beginner"  type="turtle_server"  required="true" output="screen"/>
+  <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node" required="true" output="screen"/>
+
+</launch>
