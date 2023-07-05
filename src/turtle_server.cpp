@@ -9,6 +9,9 @@
 //서비스 서버 사용법
 //서비스 클라이언트 사용법 두가지 (터미널, 코드)
 //커스텀서비스 생성
+//런치파일 실행
+//런치파일에서 파라미터 긁어오기
+
 
 
 
@@ -66,7 +69,7 @@ int main(int argc, char** argv)
 	//런치파일 파라미터를 받는 곳
 	float x_speed = 1;
 	float y_speed = 1;	
-	x_speed = n.param<double>("x_speed", 1);
+	x_speed = n.param<double>("x_speed", 1);  //요 부분이 런치파일이랑 엮여있음.
 	y_speed = n.param<double>("y_speed", 1);
 	//end
 	
@@ -85,7 +88,7 @@ int main(int argc, char** argv)
 	else twist.linear.y = - y_speed;
 
 	turtlepub.publish(twist);
-
+	//
 
 
 
